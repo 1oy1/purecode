@@ -38,10 +38,23 @@ class _ContactUsPageState extends State<ContactUsPage> {
   @override
   Widget build(BuildContext context) {
   return Scaffold(
-      body: Padding(
+      body:  Stack(
+      children: [
+        Positioned(
+          top: 0,
+          left: 0,
+          child: Image.asset(
+            'assets/pure.png',
+            width: 50,
+            height: 50,
+          ),
+        ),
+        
+      Padding(
         padding: EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
+        
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -166,7 +179,7 @@ child: Text('Submit'),
                     // Rest of the code...
    
                 ),
-              ),
+              ),]),
            bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
         child: Container(
